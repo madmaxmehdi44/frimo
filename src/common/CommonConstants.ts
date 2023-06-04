@@ -1,1 +1,1 @@
-export const APP_TITLE = 'کانال باکس';
+export const APP_TITLE = 'فریمو'
