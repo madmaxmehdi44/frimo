@@ -6,10 +6,14 @@ export const tmdbClient = {
     endpoint: string,
     params?: queryString.StringifiableRecord,
   ): Promise<T> => {
+    console.log('httpClient is: '+ JSON.stringify(params))
+
     const response = await httpClient.get<T>(
       `${process.env.API_URL}${endpoint}`,
       { ...params, api_key: process.env.API_KEY },
+      
     );
+    // console.log("RESPONSE: "+JSON.stringify (`${process.env.API_URL}${endpoint}?language=fa-IR`))
     return response;
   },
 };

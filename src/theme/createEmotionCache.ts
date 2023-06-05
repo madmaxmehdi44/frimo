@@ -6,6 +6,5 @@ import {prefixer} from 'stylis';
 // It allows developers to easily override MUI styles with other styling solutions, like CSS modules.
 export default function createEmotionCache() {
   // return createCache({ key: 'css', prepend: true });
-  return createCache({ key: 'muirtl',   stylisPlugins: [prefixer, rtlPlugin],
-  prepend: true });
+  return createCache({ key: 'muirtl',  prepend: true, stylisPlugins: [prefixer, rtlPlugin]});
 }

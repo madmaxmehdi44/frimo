@@ -68,7 +68,7 @@ function AppDrawer() {
         </List>
         <Divider />
         <LoadingIndicator loading={isLoading}>
-          <List subheader={<ListSubheader>ژانرهای فیلم</ListSubheader>}>
+          <List subheader={<ListSubheader>ژانرها </ListSubheader>}>
             {genres?.map((genre) => {
               return (
                 <AppDrawerItem

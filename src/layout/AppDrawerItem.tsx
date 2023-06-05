@@ -15,7 +15,7 @@ type AppDrawerItemProps = Pick<NextLinkProps, 'href'> & {
 function AppDrawerItem({ href, icon, title, selected }: AppDrawerItemProps) {
   return (
     <ListItem disablePadding>
-      <ListItemButton href={href} component={NextLink} selected={selected}>
+      <ListItemButton  component={NextLink}  href={href} selected={selected}>
         {icon && <ListItemIcon>{icon}</ListItemIcon>}
         <ListItemText primary={title} />
       </ListItemButton>

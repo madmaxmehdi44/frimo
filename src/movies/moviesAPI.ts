@@ -8,18 +8,20 @@ export const moviesAPI = {
   movieDetails: (movieId: ID) => ({
     queryKey: ['movieDetails', movieId],
     queryFn: () =>
-      IS_SERVER
+      IS_SERVER 
         ? moviesService.getMovieDetails(movieId)
         : httpClient.get<MovieDetails>(`/api/movies/${movieId}`),
   }),
+  //https://api.themoviedb.org/3/movie/550?api_key=72361aa264de956767628b1f9e47618b&language=fa-IR
   movieRecommendations: (movieId: ID) => ({
     queryKey: ['movieRecommendations', movieId],
     queryFn: ({ pageParam = FIRST_PAGE }) =>
       IS_SERVER
         ? moviesService.getMovieRecommendations(movieId, { page: pageParam })
         : httpClient.get<PaginationResponse<Movie>>(
-            `/api/movies/${movieId}/recommendations`,
-            {
+          // `/api/movies/${movieId}/recommendations?translations`,
+          `/api/movies/${movieId}/recommendations`,
+          {
               page: pageParam,
             },
           ),

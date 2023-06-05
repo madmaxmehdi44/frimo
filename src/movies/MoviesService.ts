@@ -42,7 +42,7 @@ const getDiscoverMovies = async (
   params: { genreId?: ID; sortBy?: string },
 ) => {
   const movies = await tmdbClient.get<PaginationResponse<Movie>>(
-    '/discover/movie',
+    '/discover/movie?language=fa-IR',
     {
       with_genres: params.genreId,
       sort_by: params.sortBy,
