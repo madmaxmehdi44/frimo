@@ -70,7 +70,7 @@ function SearchAutocomplete({ autoFocus, sx }: SearchAutocompleteProps) {
   return (
     <BaseAutocomplete<Suggestion, false, true, true>
       sx={sx}
-      placeholder="بحث الأفلام والممثلين"
+      // placeholder="بحث الأفلام والممثلين"
       options={options}
       renderOption={(props, option) => {
         return isMovie(option) ? (

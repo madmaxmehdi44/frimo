@@ -15,7 +15,7 @@ type BaseAutocompleteProps<
   FreeSolo extends boolean | undefined,
 > = Pick<
   AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>,
-  | 'placeholder'
+  // | 'placeholder'
   | 'loading'
   | 'inputValue'
   | 'value'
@@ -57,7 +57,7 @@ function BaseAutocomplete<
           {...params}
           variant="standard"
           autoFocus={autoFocus}
-          placeholder={rest.placeholder}
+          // placeholder={rest.placeholder}
           InputProps={{
             ...params.InputProps,
             endAdornment: (
