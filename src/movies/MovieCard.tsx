@@ -33,7 +33,7 @@ function MovieCard({ movie, subheader }: MovieCardProps) {
       <Box
         sx={{
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'space-around',
           paddingBottom: 1,
           paddingX: 1,
         }}

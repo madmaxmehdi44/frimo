@@ -20,7 +20,7 @@ export const moviesAPI = {
         ? moviesService.getMovieRecommendations(movieId, { page: pageParam })
         : httpClient.get<PaginationResponse<Movie>>(
           // `/api/movies/${movieId}/recommendations?translations`,
-          `/api/movies/${movieId}/recommendations`,
+          `/api/movies/${movieId}/recommendations?language=ar-AE`,
           {
               page: pageParam,
             },
@@ -32,7 +32,7 @@ export const moviesAPI = {
     queryFn: ({ pageParam = FIRST_PAGE }) =>
       IS_SERVER
         ? moviesService.getDiscoverMovies(pageParam, args)
-        : httpClient.get<PaginationResponse<Movie>>(`/api/movies/discover`, {
+        : httpClient.get<PaginationResponse<Movie>>(`/api/movies/discover?language=ar-AE`, {
             ...args,
             page: pageParam,
           }),

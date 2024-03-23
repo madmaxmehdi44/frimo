@@ -18,8 +18,8 @@ function PopularPeoplePage() {
 
   return (
     <>
-      <BaseSeo title="بازیگران مشهور" description="لیست بازیگران مشهور" />
-      <PageTitle title="بازیگران مشهور" />
+      <BaseSeo title="ممثلون مشهورون" description="قائمة الممثلين المشهورين" />
+      <PageTitle title="ممثلون مشهورون" />
       <InfiniteGridList
         loading={isFetching}
         hasNextPage={!!hasNextPage}

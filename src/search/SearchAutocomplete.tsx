@@ -48,10 +48,10 @@ function SearchAutocomplete({ autoFocus, sx }: SearchAutocompleteProps) {
     if (selectedOption) {
       switch (selectedOption.media_type) {
         case MediaType.MOVIE:
-          router.push(`/movie/${selectedOption.id}`);
+          router.push(`/movie/${selectedOption.id}?language=ar-AE`);
           break;
         case MediaType.PERSON:
-          router.push(`/person/${selectedOption.id}`);
+          router.push(`/person/${selectedOption.id}?language=ar-AE`);
           break;
         default:
           return;
@@ -70,7 +70,7 @@ function SearchAutocomplete({ autoFocus, sx }: SearchAutocompleteProps) {
   return (
     <BaseAutocomplete<Suggestion, false, true, true>
       sx={sx}
-      placeholder="جستوجوی فیلم ها  و بازیگران"
+      placeholder="بحث الأفلام والممثلين"
       options={options}
       renderOption={(props, option) => {
         return isMovie(option) ? (

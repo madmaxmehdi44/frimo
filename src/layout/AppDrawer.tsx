@@ -46,29 +46,29 @@ function AppDrawer() {
           height: '100%',
         }}
       >
-        <List subheader={<ListSubheader>ترند ها</ListSubheader>}>
+        <List subheader={<ListSubheader> اتجاهات</ListSubheader>}>
           <AppDrawerItem
-            href="/movie/popular"
+            href="/movie/popular?language=ar-AE"
             selected={router.pathname === '/movie/popular'}
             icon={<TrendingUpIcon />}
-            title="فیلم های محبوب"
+            title="الأفلام الشعبية"
           />
           <AppDrawerItem
-            href="/movie/top-rated"
+            href="/movie/top-rated?language=ar-AE"
             selected={router.pathname === '/movie/top-rated'}
             icon={<StarIcon />}
-            title="فیلم های امتیاز بالا"
+            title="الأفلام ذات التصنيف العالي"
           />
           <AppDrawerItem
-            href="/person/popular"
+            href="/person/popular?language=ar-AE"
             selected={router.pathname === '/person/popular'}
             icon={<PersonIcon />}
-            title="بازیگران مشهور"
+            title="ممثلون مشهورون"
           />
         </List>
         <Divider />
         <LoadingIndicator loading={isLoading}>
-          <List subheader={<ListSubheader>ژانرها </ListSubheader>}>
+          <List subheader={<ListSubheader>الأنواع </ListSubheader>}>
             {genres?.map((genre) => {
               return (
                 <AppDrawerItem

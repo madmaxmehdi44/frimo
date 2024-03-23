@@ -27,12 +27,16 @@ const getMovie = async <T extends Movie>(
       'The resource you requested could not be found.',
     );
   }
+  console.log(`Movei is:   ${movie.title}`)
+  
   return movie;
 };
 
+
+
 const getMovieGenres = async () => {
   const { genres } = await tmdbClient.get<{ genres: Genre[] }>(
-    '/genre/movie/list',
+    '/genre/movie/list?language=ar-A',
   );
   return genres;
 };
@@ -42,7 +46,8 @@ const getDiscoverMovies = async (
   params: { genreId?: ID; sortBy?: string },
 ) => {
   const movies = await tmdbClient.get<PaginationResponse<Movie>>(
-    '/discover/movie?language=fa-IR',
+    // '/discover/movie?language=fa-IR',
+    '/discover/movie?language=ar-AE',
     {
       with_genres: params.genreId,
       sort_by: params.sortBy,
@@ -56,7 +61,7 @@ const getDiscoverMovies = async (
 
 const getPopularMovies = async (page: number) => {
   const movies = await tmdbClient.get<PaginationResponse<Movie>>(
-    '/movie/popular',
+    '/movie/popular?language=ar-A',
     {
       page,
     },
@@ -67,7 +72,7 @@ const getPopularMovies = async (page: number) => {
 
 const getTopRatedMovies = async (page: number) => {
   const movies = await tmdbClient.get<PaginationResponse<Movie>>(
-    '/movie/top_rated',
+    '/movie/top_rated?language=ar-A',
     {
       page,
     },

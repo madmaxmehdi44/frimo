@@ -38,8 +38,7 @@ function TmdbAttribution() {
         <LoginIcon />
               </ExternalLink>
       <Typography fontSize={(theme) => theme.typography.fontSize * 0.9}>
-        محصول شرکت رستا. توسعه دهنده:مهدی زاده مینائی
-      </Typography>
+      منتج شركة الراستا. المطور: مهدي زاده مينائي      </Typography>
     </Box>
   );
 }

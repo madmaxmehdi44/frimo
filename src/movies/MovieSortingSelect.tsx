@@ -4,23 +4,23 @@ import { Maybe } from '@/common/CommonTypes';
 const MOVIE_SORTING = {
   popularity: {
     id: 'popularity.desc',
-    title: 'معروف ترین ها',
+    title: 'الأكثر شهرة',
   },
   voteCount: {
     id: 'vote_count.desc',
-    title: 'بیشترین رای',
+    title: 'معظم الأصوات',
   },
   voteAverage: {
     id: 'vote_average.desc',
-    title: 'بالاترین امتیاز',
+    title: 'أعلى الدرجات',
   },
   newToOld: {
     id: 'release_date.desc',
-    title: 'جدید به قدیم',
+    title: 'الجديد على القديم',
   },
   releaseDate: {
     id: 'release_date.asc',
-    title: 'قدیم به جدید',
+    title: 'القديم إلى الجديد',
   },
 };
 
@@ -48,7 +48,7 @@ function MovieSortingSelect({ value, onChange }: MovieSortingSelectProps) {
   return (
     <Box sx={{ minWidth: 220 }}>
       <TextField
-        label="ترنیب"
+        label="طرنيب"
         select
         fullWidth
         size="small"

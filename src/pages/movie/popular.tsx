@@ -8,8 +8,8 @@ import { GetServerSideProps } from 'next';
 function PopularMoviesPage() {
   return (
     <MoviesListTemplate
-      title="فیلم های محبوب"
-      description="لیست فیلم های محبوب"
+      title="الأفلام الشعبية"
+      description="الأفلام الشعبية"
       apiQuery={moviesAPI.popularMovies()}
     />
   );

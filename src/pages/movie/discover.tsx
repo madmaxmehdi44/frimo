@@ -25,7 +25,7 @@ function DiscoverMoviesPage() {
 
   return (
     <MoviesListTemplate
-      title={genre ? `${genre.name} Movies` : 'فیلم های یافت شده'}
+      title={genre ? `${genre.name} Movies` : 'وجدت أشرطة الفيديو'}
       titleExtra={
         <MovieSortingSelect
           value={sorting.id}
@@ -36,7 +36,7 @@ function DiscoverMoviesPage() {
           }
         />
       }
-      description={genre ? `${genre.name} movies list` : 'لیست فیلم های بافت شده'}
+      description={genre ? `${genre.name} movies list` : 'قائمة الأفلام المنسوجة'}
       apiQuery={moviesAPI.discoverMovies({
         genreId,
         sortBy: sorting.id,

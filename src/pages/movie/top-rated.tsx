@@ -8,8 +8,8 @@ import { GetServerSideProps } from 'next';
 function TopRatedMoviesPage() {
   return (
     <MoviesListTemplate
-      title="فیلم های رتبه برتر"
-      description="فیلم های دارای رتبه برتر"
+      title="الأفلام الأعلى تقييمًا"
+      description="الأفلام الأعلى تقييمًا"
       apiQuery={moviesAPI.topRatedMovies()}
     />
   );

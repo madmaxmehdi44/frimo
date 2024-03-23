@@ -13,7 +13,7 @@ function PersonCard({ person }: PersonCardProps) {
   const { getImageUrl } = useApiConfiguration();
 
   return (
-    <BaseCard href={`/person/${person.id}`}>
+    <BaseCard href={`/person/${person.id}?language=ar-A`}>
       <Box sx={{ position: 'relative', aspectRatio: '2 / 3' }}>
         <BaseImage
           src={getImageUrl(person.profile_path)}

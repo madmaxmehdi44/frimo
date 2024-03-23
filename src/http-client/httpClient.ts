@@ -3,9 +3,13 @@ import queryString from 'query-string';
 
 async function handleResponse(response: Response) {
   if (response.ok) {
+  //  console.log(response.json());
+
+
     return await response.json();
   } else {
     let message = response.statusText;
+    
 
     try {
       const errorJson = await response.json();
@@ -17,6 +21,8 @@ async function handleResponse(response: Response) {
   }
 }
 
+
+
 export const httpClient = {
   get: <Data>(
     url: string,
@@ -25,4 +31,6 @@ export const httpClient = {
     fetch(queryString.stringifyUrl({ url, query: params })).then(
       handleResponse,
     ),
+   
+
 };
